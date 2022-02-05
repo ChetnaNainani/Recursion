@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+string f(int i, string s) {
+	if (i >= s.size()/2) {
+		return "yes";
+	}
+    if(s[i]!=s[s.size()-i-1])return "no";
+	return f(i+1,s);
+}
+
+
+int main() {
+	string s;
+	cin >> s;
+	cout<<f(0,s);
+	return 0;
+}
